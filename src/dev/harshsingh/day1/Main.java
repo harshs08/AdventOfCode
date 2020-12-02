@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 public class Main {
   private static final int TARGET = 2020;
@@ -15,14 +16,14 @@ public class Main {
     get2Sum2020(data);
   }
 
-  public static void get2Sum2020(ArrayList<Integer> list) {
+  public static void get2Sum2020(List<Integer> list) {
     HashSet<Integer> set = new HashSet<>();
 
     for (int num : list) {
       int diff = TARGET - num;
 
       if (set.contains(diff)) {
-        System.out.println("Found pair that sums to " + TARGET + "num 1: " + diff + " num 2: " + num);
+        System.out.println("Found pair that sums to " + TARGET + " num 1: " + diff + " num 2: " + num);
         System.out.println("Their product: " + diff*num);
       } else {
         set.add(num);
